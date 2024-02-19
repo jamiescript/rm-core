@@ -1,0 +1,102 @@
+:root {
+  --color-base: #000000;
+  --color-contrast: #ffffff;
+  --shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  --radius: 5px;
+}
+
+body {
+  transition: all 0.3s ease;
+  background-color: var(--color-contrast);
+  color: var(--color-base);
+
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+
+  a {
+    color: var(--color-base);
+  }
+
+  button {
+    background-color: var(--color-base);
+    color: var(--color-contrast);
+    border: none;
+  }
+}
+
+.dark {
+  background-color: var(--color-base);
+  color: var(--color-contrast);
+
+  a {
+    color: var(--color-contrast);
+  }
+
+  button {
+    background-color: var(--color-contrast);
+    color: var(--color-base);
+  }
+
+  aside {
+    border-right: 1px solid var(--color-contrast);
+
+    li {
+      border-bottom: 1px solid var(--color-contrast);
+
+      a {
+        &:hover {
+          background-color: var(--color-contrast);
+          color: var(--color-base);
+        }
+        &.active {
+          background-color: var(--color-contrast);
+          color: var(--color-base);
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border-right: 1px solid var(--color-base);
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    border-bottom: 1px solid var(--color-base);
+    text-align: left;
+
+    a {
+      display: block;
+      padding: 1rem;
+
+      &:hover {
+        background-color: var(--color-base);
+        color: var(--color-contrast);
+      }
+
+      &.active {
+        background-color: var(--color-base);
+        color: var(--color-contrast);
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+}

@@ -1,0 +1,22 @@
+.authentication {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 300px;
+  border: 1px solid #ededed;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+
+  *:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  input,
+  button {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+  }
+}
