@@ -33,11 +33,11 @@ if (localStorage.getItem("theme") === "dark") {
 button.addEventListener("click", () => {
   if (body.classList.contains("dark")) {
     body.classList.remove("dark");
-    button.textContent = "🔆 Light Mode";
+    button.textContent = "🌙 Dark Mode";
     localStorage.setItem("theme", "light");
   } else {
     body.classList.add("dark");
-    button.textContent = "🌙 Dark Mode";
+    button.textContent = "🔆 Light Mode";
     localStorage.setItem("theme", "dark");
   }
 });
